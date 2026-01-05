@@ -44,3 +44,7 @@ one-step diffusion-based super-resolution behavior as described in the paper.
 The following examples show super-resolution results obtained
 from the reduced-scale training setting (resolution 128, batch size 1,
 approximately 5,000 training images).
+
+| LR Image | SinSR (1-step) | ResShift (1-step) | ResShift (15-step) |
+|---------|----------------|-------------------|--------------------|
+| <a href="assets/stage1/lr_dogs.png"><img src="assets/stage1/lr_dogs.png" width="240"/></a> | <a href="assets/stage1/single_sinsr_dogs.png"><img src="assets/stage1/single_sinsr_dogs.png" width="240"/></a> | <a href="assets/stage1/single_resshift_dogs.png"><img src="assets/stage1/single_resshift_dogs.png" width="240"/></a> | <a href="assets/stage1/15steps_resshift_dogs.png"><img src="assets/stage1/15steps_resshift_dogs.png" width="240"/></a> |
