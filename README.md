@@ -32,3 +32,15 @@ image resolution of 256, batch size of 4, and 500,000 training iterations.
 This stage focuses on reproducing the quantitative and qualitative results
 reported in the original SinSR paper.
 
+## Results: Stage 1 – Reduced-scale Verification
+In the reduced-scale setting, the objective was not to fully reproduce
+the quantitative results of the paper, but to verify the core behavior
+of the SinSR model under constrained computational resources.
+Despite the simplified setup, the model successfully demonstrated
+one-step diffusion-based super-resolution behavior as described in the paper.
+
+### Qualitative Results
+
+The following examples show super-resolution results obtained
+from the reduced-scale training setting (resolution 128, batch size 1,
+approximately 5,000 training images).
