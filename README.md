@@ -176,3 +176,62 @@ By increasing the weight of the ground-truth consistency loss, the training obje
 
 > The qualitative differences between the 1:1:1 and 1:1:2 settings are subtle under the reduced-scale training setup,  
 > and the adjustment of loss weights primarily serves to mitigate inversion-dominated optimization and stabilize the training objective.
+
+### Case 3: Extreme rebalancing (Loss ratio = 1.0 : 0.1 : 10.0)
+
+In this setting, the ground-truth consistency loss was strongly emphasized,
+the distillation loss was kept at its original scale, and the inversion loss
+was significantly down-weighted.
+
+**Motivation**
+
+During reduced-scale training, a severe imbalance in loss magnitudes was observed
+among the different loss terms. In particular, the inversion loss exhibited a
+disproportionately large scale compared to the ground-truth consistency loss,
+causing the optimization process to be overly dominated by inversion accuracy.
+
+To mitigate this issue, the inversion loss weight was reduced, while the
+ground-truth consistency loss was aggressively amplified. The distillation loss
+was kept unchanged to preserve stable teacher guidance without allowing inversion
+error minimization to dominate the learning process.
+
+This configuration intentionally represents an extreme reweighting strategy,
+designed to examine whether prioritizing ground-truth reconstruction can correct
+the optimization bias induced by loss-scale imbalance, rather than serving as a
+practically optimal setting.
+
+<table>
+<tr>
+<th>Image</th><th>Student</th><th>Teacher</th><th>PSNR ↑</th><th>LPIPS ↓</th><th>CLIP ↑</th><th>MUSIQ ↑</th>
+</tr>
+
+<tr>
+<td align="center">1</td>
+<td align="center"><img src="assets/stage1/1_0.1_10/student_result/1.png" width="250"></td>
+<td align="center"><img src="assets/stage1/1_0.1_10/teacher_result/1.png" width="250"></td>
+<td align="center">22.85</td>
+<td align="center">0.496</td>
+<td align="center">0.296</td>
+<td align="center">47.86</td>
+</tr>
+
+<tr>
+<td align="center">2</td>
+<td align="center"><img src="assets/stage1/1_0.1_10/student_result/2.png" width="250"></td>
+<td align="center"><img src="assets/stage1/1_0.1_10/teacher_result/2.png" width="250"></td>
+<td align="center">24.51</td>
+<td align="center">0.549</td>
+<td align="center">0.465</td>
+<td align="center">55.59</td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td align="center"><img src="assets/stage1/1_0.1_10/student_result/3.png" width="250"></td>
+<td align="center"><img src="assets/stage1/1_0.1_10/teacher_result/3.png" width="250"></td>
+<td align="center">21.70</td>
+<td align="center">0.538</td>
+<td align="center">0.657</td>
+<td align="center">55.18</td>
+</tr>
+</table>
