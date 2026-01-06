@@ -100,7 +100,7 @@ ground-truth consistency loss.
 <td align="center"><img src="assets/stage1/1_1_1/teacher_result/1.png" width="250"></td>
 <td align="center">22.99</td>
 <td align="center">0.488</td>
-<td align="center">0.320</td>
+<td align="center">0.321</td>
 <td align="center">48.18</td>
 </tr>
 
@@ -108,20 +108,20 @@ ground-truth consistency loss.
 <td align="center">2</td>
 <td align="center"><img src="assets/stage1/1_1_1/student_result/2.png" width="250"></td>
 <td align="center"><img src="assets/stage1/1_1_1/teacher_result/2.png" width="250"></td>
-<td align="center">21.68</td>
-<td align="center">0.534</td>
-<td align="center">0.622</td>
-<td align="center">57.66</td>
+<td align="center">24.56</td>
+<td align="center">0.553</td>
+<td align="center">0.469</td>
+<td align="center">60.02</td>
 </tr>
 
 <tr>
 <td align="center">3</td>
 <td align="center"><img src="assets/stage1/1_1_1/student_result/3.png" width="250"></td>
 <td align="center"><img src="assets/stage1/1_1_1/teacher_result/3.png" width="250"></td>
-<td align="center">24.56</td>
-<td align="center">0.553</td>
-<td align="center">0.469</td>
-<td align="center">60.02</td>
+<td align="center">21.68</td>
+<td align="center">0.534</td>
+<td align="center">0.622</td>
+<td align="center">57.66</td>
 </tr>
 </table>
 
@@ -138,3 +138,38 @@ During the reduced-scale training, the inversion loss exhibited a significantly 
 
 By increasing the weight of the ground-truth consistency loss, the training objective was rebalanced to encourage better reconstruction quality while maintaining stable inversion and distillation behavior.
 
+<table>
+<tr>
+<th>Image</th><th>Student</th><th>Teacher</th><th>PSNR ↑</th><th>LPIPS ↓</th><th>CLIP ↑</th><th>MUSIQ ↑</th>
+</tr>
+
+<tr>
+<td align="center">1</td>
+<td align="center"><img src="assets/stage1/1_1_2/student_result/1.png" width="250"></td>
+<td align="center"><img src="assets/stage1/1_1_2/teacher_result/1.png" width="250"></td>
+<td align="center">22.88</td>
+<td align="center">0.497</td>
+<td align="center">0.357</td>
+<td align="center">49.10</td>
+</tr>
+
+<tr>
+<td align="center">2</td>
+<td align="center"><img src="assets/stage1/1_1_2/student_result/2.png" width="250"></td>
+<td align="center"><img src="assets/stage1/1_1_2/teacher_result/2.png" width="250"></td>
+<td align="center">24.42</td>
+<td align="center">0.557</td>
+<td align="center">0.687</td>
+<td align="center">58.65</td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td align="center"><img src="assets/stage1/1_1_2/student_result/3.png" width="250"></td>
+<td align="center"><img src="assets/stage1/1_1_2/teacher_result/3.png" width="250"></td>
+<td align="center">21.71</td>
+<td align="center">0.549</td>
+<td align="center">0.611</td>
+<td align="center">56.47</td>
+</tr>
+</table>
