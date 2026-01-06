@@ -127,3 +127,14 @@ ground-truth consistency loss.
 
 > **Note:**  
 > All quantitative metrics (PSNR, LPIPS, CLIP, MUSIQ) are computed **only on the student model outputs**.  
+
+### Case 2: Adjusted loss weighting (Loss ratio = 1 : 1 : 2)
+
+In this setting, the ground-truth consistency loss was assigned a higher weight while keeping the inversion and distillation losses unchanged.
+
+**Motivation**
+
+During the reduced-scale training, the inversion loss exhibited a significantly larger magnitude compared to the ground-truth consistency loss. This imbalance caused the optimization process to focus excessively on minimizing the inversion error, which slowed down effective learning toward ground-truth image reconstruction.
+
+By increasing the weight of the ground-truth consistency loss, the training objective was rebalanced to encourage better reconstruction quality while maintaining stable inversion and distillation behavior.
+
