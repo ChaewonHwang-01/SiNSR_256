@@ -19,8 +19,8 @@ experiments were conducted in two stages.
 Due to limited GPU resources, an initial experiment was performed
 to confirm the core behavior of the SinSR model.
 The training setup was intentionally simplified by reducing the dataset size
-to approximately 5,000 images, setting the batch size to 1, and lowering
-the image resolution to 128.
+to approximately 5,000 images, lowering
+the image resolution to 128, setting the batch size to 1, and 16,000 training iterations.
 This stage aimed to verify that the model functions as described in the paper
 before scaling up to the full experimental setting.
 
