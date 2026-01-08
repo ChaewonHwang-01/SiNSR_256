@@ -266,6 +266,6 @@ To efficiently support teacher–student training, the computation was distribut
 
 This configuration ensures stable parallel execution of the teacher and student models while avoiding GPU memory contention during metric computation.
 
-### Objective
+### ✔ Objective
 
 The primary objective of Stage 2 is to reproduce the **quantitative metrics** and **qualitative behaviors** reported in the original SiNSR paper under full-scale training conditions, and to jointly analyze and validate the potential for performance improvement and model lightweighting.
